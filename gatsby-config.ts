@@ -5,6 +5,7 @@ const config: GatsbyConfig = {
         title: 'Randmon',
     },
     graphqlTypegen: true,
+    pathPrefix: '/gatsby-blog',
     plugins: [
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',

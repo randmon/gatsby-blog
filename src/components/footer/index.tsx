@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActionIcon, Container, createStyles, Group } from '@mantine/core';
-import { IconBrandGmail, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons';
+import { IconBrandGithub, IconBrandGmail, IconBrandInstagram, IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons';
 import NavBrand from '../logo';
 import { ThemeToggle } from './theme-toggle';
 
@@ -39,18 +39,18 @@ const Footer = () => {
         <Container className={classes.inner}>
           <ThemeToggle />
           <Group spacing={0} className={classes.links} position="right" noWrap>
+            <ActionIcon size="lg" component='a' target='_blank' href='https://github.com/randmon'>
+              <IconBrandGithub size={18} stroke={1.5} />
+            </ActionIcon>
             <ActionIcon size="lg" component='a' target='_blank' href='https://www.linkedin.com/in/cristinacmarques/'>
               <IconBrandLinkedin size={18} stroke={1.5} />
             </ActionIcon>
             <ActionIcon size="lg" component='a' target='_blank' href='https://twitter.com/randm0n'>
               <IconBrandTwitter size={18} stroke={1.5} />
             </ActionIcon>
-            <ActionIcon size="lg" component='a' target='_blank' href='mailto:ccmarques98@gmail.com'>
-              <IconBrandGmail size={18} stroke={1.5} />
-            </ActionIcon>
-            {/* <ActionIcon size="lg" component='a' target='_blank' href='https://www.instagram.com/cristinacmarques/'>
+            <ActionIcon size="lg" component='a' target='_blank' href='https://www.instagram.com/cristinacmarques/'>
               <IconBrandInstagram size={18} stroke={1.5} />
-            </ActionIcon> */}
+            </ActionIcon>
           </Group>
         </Container>
       </div>

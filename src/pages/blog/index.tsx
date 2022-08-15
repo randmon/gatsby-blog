@@ -1,11 +1,25 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, PageProps } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/head/seo';
 
-const BlogPage = ({data}) => {
+type GraphQLResult = {
+    allMdx: {
+        nodes: {
+            id: string;
+            slug: string;
+            frontmatter: {
+                title: string;
+                date: string;
+                description: string;
+            };
+        }[];
+    }
+};
+
+const BlogPage = ({data}: PageProps<GraphQLResult>) => {
     return (
-        <Layout pageTitle='My Blog Posts'>
+        <Layout>
             <ul>
                 {
                     data.allMdx.nodes.map(node => (
